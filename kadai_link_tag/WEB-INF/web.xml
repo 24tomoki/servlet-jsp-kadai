@@ -19,7 +19,7 @@
 
   <servlet-mapping>
     <servlet-name>LinkServlet</servlet-name>
-    <url-pattern>/</url-pattern>
+    <url-pattern>/sj</url-pattern>
   </servlet-mapping>
   
   </web-app>
