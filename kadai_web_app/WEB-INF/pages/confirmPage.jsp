@@ -38,6 +38,6 @@
     </tr>
   </table>
   <button onclick="location.href='<%= request.getContextPath() %>/complete';" >確定</button>
-  <button onclick="history.back()")>キャンセル</button>
+  <button onclick="history.back()">キャンセル</button>
 </body>
 </html>
