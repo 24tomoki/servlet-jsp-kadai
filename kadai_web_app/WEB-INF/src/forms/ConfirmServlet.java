@@ -1,0 +1,35 @@
+package forms;
+
+import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class ConfirmServlet extends HttpServlet {
+	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException{
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("text/html; charset=UTF-8");
+		//フォームデータを取得
+		String name = request.getParameter("name");	
+		String email = request.getParameter("email");
+		String address = request.getParameter("email");
+		String phone_number = request.getParameter("phone_number");
+		//リクエストスコープに設定
+		request.setAttribute("name", name);
+		request.setAttribute("email", email);
+		request.setAttribute("address", address);
+		request.setAttribute("phone_number", phone_number);
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/pages/confirmPage.jsp");
+		dispatcher.forward(request, response);
+	}
+	
+	
+	
+	
+	
+
+}
